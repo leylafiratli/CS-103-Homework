@@ -7,8 +7,7 @@
 // ----- Boilerplate ------
 #include <iostream>
 #include <cmath>
-#include <random>
-#include <vector>
+#include <stdlib.h>
 
 using namespace std;
 // ---- end Boilerplate -----
