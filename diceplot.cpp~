@@ -24,7 +24,7 @@ void printHistogram(int[21]);
 
 int main() {
   int experiments;
-  int recordingTable[21];
+  int recordingTable[21] = {0};
   /* init random seed: */
   srand(time(0));
   // User Input 
@@ -33,8 +33,10 @@ int main() {
   for(int i=0;i<experiments;i++){
     int testValue = roll() + roll() + roll() + roll();
     recordingTable[testValue-4] = recordingTable[testValue-4] + 1;
+    }
+  for(int i =0;i<20;i++){
+    cout << recordingTable[i] << endl;
   }
-  printHistogram(recordingTable);
 
   return 0;
 }
