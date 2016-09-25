@@ -34,12 +34,17 @@ int main()
                   // It should be initialized with *'s and then
                   //  change them to the actual letters when the 
                   //  user guesses the letter
-  char*pointer = word;
-  for(int i = 0;i<sizeof(targetWord)-1;i++){
-     word[i]  = '*';
-  }
-
-
+  /* char *ptr = word;
+  cout << strlen(targetWord)<<endl;
+  for(int i = 0;i<strlen(targetWord);i++){
+	*ptr  = '*';
+	ptr++;
+	}*/
+  //----- failed implementation -----------
+  
+  strncpy(word,"*******************",strlen(targetWord));
+  word[strlen(targetWord)]='\0';
+  
 
 
   
@@ -47,13 +52,12 @@ int main()
   //  is guessed correctly or 10 turns have elapsed
   while(numTurns > 0) {
     /* ---------- I/O Stuff ---- */
-    cout << targetWord << endl;
-    cout << "Here is your word: ";
     if(numTurns > 1){
       cout << "You have " << numTurns << " lives remaining." << endl;
     }else{
       cout << "You have " << numTurns << " life remaining." << endl;
     }
+    cout << "Here is your word: ";
     cout << word << endl;
     cout << "Guess a letter! : ";
     cin >> guess;
@@ -73,6 +77,7 @@ int main()
 
   // Print out end of game status
   if(wordGuessed){
+    cout << "The word was: " << targetWord << endl;
     cout << "Congratulations, you got it!" << endl;
   }else {
     cout << "Sorry, you didn't guess the word this time. Better luck next time!" << endl;
@@ -89,7 +94,7 @@ int main()
 int processGuess(char* word, const char* targetWord, char guess)
 {
   int numberOfHits = 0;
-  for(int i = 0; i<sizeof(targetWord)-1;i++){
+  for(int i = 0; i<strlen(targetWord);i++){
     if(guess == targetWord[i]) {
       word[i] = guess;
       numberOfHits++;

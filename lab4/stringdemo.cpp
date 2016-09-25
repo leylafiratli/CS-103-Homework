@@ -15,10 +15,10 @@ int main() {
   char* aString;
 
   //  yourString = myString;
-  strncpy(aString,myString,80);
+  // strncpy(aString,myString,80);
   
   aString = myString; // make a copy?
-  strncpy(yourString, myString, 80); // make a copy?
+    strncpy(yourString, myString, 80); // make a copy?
   cout << aString << endl;
   cout << yourString << endl;
  
