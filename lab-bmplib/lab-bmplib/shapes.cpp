@@ -10,17 +10,24 @@ unsigned char image[SIZE][SIZE];
 // Fill in this function:
 void draw_rectangle(int top, int left, int height, int width) { //WORKS!
    for(int i = top; i<top+height; i++) {
-   		if(i <= 255 && left+width <= 255) {
+   		if(i <= 255 && i >= 0 && left <= 255 && left >= 0) {
    			image[i][left] = 0;
+         }
+         if(i<=255 && i >=0 && left+width >= 0 && left+width <= 255) {
    			image[i][left+width] = 0;
-   		}
+         }
+   		
    		
    }
+
    for(int i = left;i < left + width; i++) {
-   		if(i <= 255 && top+height <= 255) {
+   		if(i <= 255 && i>=0 && top <= 255 && top >= 0) {
    			image[top][i] = 0;
+         }
+         if(i>= 0 && i<= 255 && top+height >= 0 && top+height <= 255){
    			image[top+height][i] = 0;
-   		}
+         }
+   		
    }
 }
 
@@ -34,7 +41,9 @@ void draw_ellipse(int cy, int cx, int height, int width) {
     	double y = yRadius*sin(theta);
      	x += cx;
      	y += cy;
+      if(y<=255 && y>=0 && x<= 255 && x>=0){
      	 image[(int)y][(int)x] = 0;
+      }
   }
 
 }
