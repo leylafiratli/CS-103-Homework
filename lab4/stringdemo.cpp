@@ -14,11 +14,11 @@ int main() {
   char yourString[80];
   char* aString;
 
-  //  yourString = myString;
+  // yourString = myString;
   // strncpy(aString,myString,80);
   
   aString = myString; // make a copy?
-    strncpy(yourString, myString, 80); // make a copy?
+  strncpy(yourString, myString, 80); // make a copy?
   cout << aString << endl;
   cout << yourString << endl;
  
