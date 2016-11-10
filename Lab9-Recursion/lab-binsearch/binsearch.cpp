@@ -85,6 +85,42 @@ int binsearch(int target, int *data, int start, int end)
 	}
 	return binsearch(target,data,start,end);
 }
+/*int main(int argc, char* argv[]) {
+   
+   // declare and take input
+   double recipe_amounts[100];
+   string recipe_items[100];
+   int recipe_length;
+   
+   double store_prices[100];
+   string store_items[100];
+   int store_length;
+   
+   read(argv[1], &recipe_length, recipe_amounts, recipe_items);
+   read(argv[2], &store_length, store_prices, store_items);
+
+   bool impossible = false; // flag if some ingredient was missing
+   double running_total = 0; // total cost
+   
+   for (int i=0; i<recipe_length; i++) {
+      bool found_item = false; // do we find recipe item i?
+      for (int j=0; j<store_length; j++) {
+         if (recipe_items[i] == store_items[j]) { // found it!
+            running_total += recipe_amounts[i] * store_prices[j];
+            found_item = true;
+         }         
+      }
+      if (!found_item) 
+         impossible = true;
+   }
+
+   if (impossible)
+      cout << "impossible" << endl;
+   else
+      cout << running_total << endl;
+
+   return 0;
+}*/
 
 
 // implements a selection sort algorithm to sort
