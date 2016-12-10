@@ -1,0 +1,20 @@
+/*
+Author: Samuel Resendez
+Email: saresend@usc.edu
+*/
+
+/* ----- imports ---- */
+#include <iostream>
+#include "user.h"
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+  User testUser = new User("Steve",0,1998,92818);
+  
+
+  return 0;
+}

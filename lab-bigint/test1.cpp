@@ -13,7 +13,13 @@ int main(int argc, char** argv) {
     cout << b.to_string() << endl; // prints 68
   }
   else {
-    BigInt a("ABD123E",16);
+
+
+    BigInt first("DADCAFE",16);
+    BigInt second("AAABEEF",16);
+    first.add(second);
+    cout << first.to_string()<< endl;;
+    /* BigInt a("ABD123E",16);
     BigInt b("C2B3",16);
 
     BigInt base10ARep("180163134");
@@ -27,6 +33,6 @@ int main(int argc, char** argv) {
     cout <<"0x"<< a.to_string() << " -- Base 10 Form: " << base10ARep.to_string() << endl;
     b.add(a);
     base10BRep.add(base10ARep);
-    cout << "0x"<<b.to_string() << " -- Base 10 Form: " << base10BRep.to_string() << endl;
+    cout << "0x"<<b.to_string() << " -- Base 10 Form: " << base10BRep.to_string() << endl;*/
   }
 }
